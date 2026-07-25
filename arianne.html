@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - arianne</title>
+    <title>Portfolio - Arianne Tagudando</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="top-navbar">
-        <a href="index.html" class="logo">Our Website</a>
+        <a href="index.html" class="logo">OUR WEBSITE</a>
         <div style="display: flex; align-items: center; gap: 30px;">
             <ul class="top-nav-links">
                 <li><a href="index.html">Portfolio-1</a></li>
@@ -33,6 +33,12 @@
             <a href="mailto:ariannetagudando@gmail.com" title="Gmail" aria-label="Send me an email"><i class="fas fa-envelope"></i></a>
             <a href="https://instagram.com/sakura_atdusk" target="_blank" title="Instagram" aria-label="Visit my Instagram profile"><i class="fab fa-instagram"></i></a>
         </div>
+
+        <!-- Portfolio Navigation for Mobile -->
+        <nav class="portfolio-nav">
+            <a href="index.html" class="portfolio-link"><i class="fas fa-briefcase"></i> Portfolio-1</a>
+            <a href="arianne.html" class="portfolio-link active-portfolio"><i class="fas fa-briefcase"></i> Portfolio-2</a>
+        </nav>
 
         <nav class="nav-menu" id="navMenu">
             <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
@@ -57,7 +63,7 @@
 
         <section id="about">
             <h2 class="section-title">About</h2>
-            <p style="font-size: 18px;"><i>I am a BS Information Technology student with an interest in technology and computers. I enjoy learning new skills, coding, and creating simple projects.[...]
+            <p style="font-size: 18px;"><i>I am a BS Information Technology student with an interest in technology and computers. I enjoy learning new skills, coding, and creating simple projects to expand my knowledge in the field.</i></p>
         </section>
 
         <section id="skills">
@@ -85,7 +91,7 @@
         <section id="projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="project-card" role="article" aria-label="HTML5 and JavaScript - Getting feet wet with JavaScript to add interactivity and dynamic features to websites">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="project-card" role="article" aria-label="HTML5 and JavaScript - Getting feet wet with JavaScript">
                     <div class="project-img-placeholder">
                         <img src="Html.jpg" alt="HTML5 project">
                     </div>
@@ -95,17 +101,17 @@
                     </div>
                 </a>
                 
-                <a href="https://www.canva.com/" target="_blank" class="project-card" role="article" aria-label="Web Design - Designed modern, clean, and responsive website interfaces with user experience focus">
+                <a href="https://www.canva.com/" target="_blank" class="project-card" role="article" aria-label="Web Design - Designed modern, clean, and responsive website interfaces with user experience">
                     <div class="project-img-placeholder">
                         <img src="Html.jpg" alt="Web Design project">
                     </div>
                     <div class="project-info">
                         <h3>Web Design</h3>
-                        <p>Designed modern, clean, and responsive website interfaces with a focus on user experience. Combined creativity and functionality to create visually appealing websites th[...]
+                        <p>Designed modern, clean, and responsive website interfaces with a focus on user experience. Combined creativity and functionality to create visually appealing websites that users enjoy.</p>
                     </div>
                 </a>
                 
-                <a href="https://github.com/Tagudando" target="_blank" class="project-card" role="article" aria-label="GitHub and Version Control - Developing and managing software projects using GitHub for version control and team collab[...]">
+                <a href="https://github.com/Tagudando" target="_blank" class="project-card" role="article" aria-label="GitHub and Version Control - Developing and managing software projects using GitHub">
                     <div class="project-img-placeholder">
                         <img src="Github.jpg" alt="GitHub project">
                     </div>
@@ -176,6 +182,7 @@
         const hamburgerMenu = document.getElementById("hamburgerMenu");
         const sidebar = document.getElementById("sidebar");
         const navLinks = document.querySelectorAll(".nav-menu a");
+        const portfolioLinks = document.querySelectorAll(".portfolio-link");
 
         // Profile Modal
         profileTrigger.onclick = function() {
@@ -201,6 +208,16 @@
 
         // Close menu when clicking on a nav link
         navLinks.forEach(link => {
+            link.addEventListener("click", function() {
+                if (window.innerWidth <= 768) {
+                    hamburgerMenu.classList.remove("active");
+                    sidebar.classList.remove("active");
+                }
+            });
+        });
+
+        // Close menu when clicking on portfolio link (to navigate)
+        portfolioLinks.forEach(link => {
             link.addEventListener("click", function() {
                 if (window.innerWidth <= 768) {
                     hamburgerMenu.classList.remove("active");
