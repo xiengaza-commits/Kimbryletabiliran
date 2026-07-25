@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kim Bryle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <a href="index.html" class="logo">OUR WEBSITE</a>
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <ul class="top-nav-links">
+                <li><a href="index.html" style="color: #149ddd; font-weight: bold;">Portfolio-1</a></li>
+                <li><a href="arianne.html">Portfolio-2</a></li>
+            </ul>
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <img src="1751348694577.jpg" alt="Profile" class="profile-img" id="profileTrigger">
+        <h1 class="profile-name">Kim Bryle P. Tabiliran</h1>
+        
+        <div class="social-links">
+            <a href="https://facebook.com/ecxbryle" target="_blank" title="Facebook" aria-label="Visit my Facebook page"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:tabilirankimbryle@gmail.com" title="Gmail" aria-label="Send me an email"><i class="fas fa-envelope"></i></a>
+            <a href="https://tiktok.com/@kiembryle" target="_blank" title="TikTok" aria-label="Visit my TikTok profile"><i class="fab fa-tiktok"></i></a>
+            <a href="https://instagram.com/bryexjsh" target="_blank" title="Instagram" aria-label="Visit my Instagram profile"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#skills"><i class="fas fa-file-code"></i> Skills</a>
+            <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>&copy; Copyright <strong><span>MyPortfolio</span></strong></p>
+            <p>Designed by <a href="#">Our Website</a></p>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <section id="home">
+            <h1>Kim Bryle P. <span style="color: #149ddd;">Tabiliran</span></h1>
+            <p>BSIT-2C (Bachelor of Science in Information Technology)</p>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About</h2>
+            <p style="font-size: 18px;"><i>I am a BSIT student focused on developing technical skills in software development, database management, and IT support. I am committed to continuous lea[...]
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3>CSS & HTML</h3>
+                    <div class="skill-bar"><div class="skill-per" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-box">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar"><div class="skill-per" style="width: 50%;"></div></div>
+                </div>
+                <div class="skill-box">
+                    <h3>Microsoft Office</h3>
+                    <div class="skill-bar"><div class="skill-per" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-box">
+                    <h3>Canva</h3>
+                    <div class="skill-bar"><div class="skill-per" style="width: 100%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/kimbryle061-debug" target="_blank" class="project-card" role="article" aria-label="Github - Managed and published coding projects using GitHub for version control and deployment">
+                    <div class="project-img-placeholder">
+                        <img src="Github.jpg" alt="Github project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Github</h3>
+                        <p>Managed and published my coding projects using GitHub. I use version control to organize files, track updates, and deploy websites through GitHub Pages while continuousl[...]
+                    </div>
+                </a>
+                
+                <a href="https://www.canva.com/" target="_blank" class="project-card" role="article" aria-label="Web Design - Designed modern, clean, and responsive website interfaces with user experience focus">
+                    <div class="project-img-placeholder">
+                        <img src="Html.jpg" alt="Web design project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Web Design</h3>
+                        <p>Designed modern, clean, and responsive website interfaces with a focus on user experience. Combined creativity and functionality to create visually appealing websites th[...]
+                    </div>
+                </a>
+                
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="project-card" role="article" aria-label="HTML - Built responsive and user-friendly web pages using semantic HTML">
+                    <div class="project-img-placeholder">
+                        <img src="Html.jpg" alt="HTML project">
+                    </div>
+                    <div class="project-info">
+                        <h3>HTML</h3>
+                        <p>Built responsive and user-friendly web pages using HTML. Created well-structured layouts with semantic elements to ensure accessibility, readability, and compatibility [...]
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <footer class="footer-section">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="footer-social-links">
+                        <a href="https://facebook.com/ecxbryle" target="_blank" class="footer-social-icon" title="Facebook" aria-label="Visit my Facebook page">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:tabilirankimbryle@gmail.com" class="footer-social-icon" title="Send me an email" aria-label="Send me an email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://tiktok.com/@kiembryle" target="_blank" class="footer-social-icon" title="TikTok" aria-label="Visit my TikTok profile">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://instagram.com/bryexjsh" target="_blank" class="footer-social-icon" title="Instagram" aria-label="Visit my Instagram profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/kimbrylepalma-a11y" target="_blank" class="footer-social-icon" title="GitHub" aria-label="Visit my GitHub profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2026 Kim Bryle P. Tabiliran. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="profileModal" class="img-modal">
+        <span class="img-modal-close" id="closeModal">&times;</span>
+        <img class="img-modal-content" id="fullScreenTarget">
+    </div>
+
+    <script>
+        const profileModal = document.getElementById("profileModal");
+        const profileTrigger = document.getElementById("profileTrigger");
+        const fullScreenTarget = document.getElementById("fullScreenTarget");
+        const closeModal = document.getElementById("closeModal");
+        const hamburgerMenu = document.getElementById("hamburgerMenu");
+        const sidebar = document.getElementById("sidebar");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+
+        // Profile Modal
+        profileTrigger.onclick = function() {
+            profileModal.style.display = "flex";
+            fullScreenTarget.src = this.src; 
+        }
+
+        closeModal.onclick = function() {
+            profileModal.style.display = "none";
+        }
+        
+        profileModal.onclick = function(e) {
+            if (e.target === profileModal) {
+                profileModal.style.display = "none";
+            }
+        }
+
+        // Hamburger Menu
+        hamburgerMenu.addEventListener("click", function() {
+            hamburgerMenu.classList.toggle("active");
+            sidebar.classList.toggle("active");
+        });
+
+        // Close menu when clicking on a nav link
+        navLinks.forEach(link => {
+            link.addEventListener("click", function() {
+                if (window.innerWidth <= 768) {
+                    hamburgerMenu.classList.remove("active");
+                    sidebar.classList.remove("active");
+                }
+            });
+        });
+        
+        // Scroll Active Nav
+        const sections = document.querySelectorAll("section");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((a) => {
+                a.classList.remove("active");
+                if (a.getAttribute("href").includes(current)) {
+                    a.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
